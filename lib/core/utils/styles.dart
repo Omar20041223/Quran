@@ -24,4 +24,51 @@ abstract class Styles{
     fontWeight: FontWeight.w400,
     color: AppColors.lightGrey
   );
+
+  //auth
+  static TextStyle textStyle32W700White = TextStyle(
+      fontSize: 32.sp,
+      fontWeight: FontWeight.w700,
+      color: AppColors.brown
+  );
+  static TextStyle textStyle16W500LightGrey = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      color: AppColors.lightGrey
+  );
+  static TextStyle textStyle16W400Black = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.black
+  );
+  static TextStyle textStyle16W600Brown = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w600,
+      color: AppColors.brown
+  );
+  static TextStyle textStyle16W500Black = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      color: Colors.black
+  );
+  static TextStyle textStyle14W400LightGrey = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.lightGrey
+  );
+  static TextStyle textStyle18W600White = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w600,
+      color: Colors.white
+  );
+  static TextStyle textStyle14W400Black = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.black
+  );
+  static TextStyle textStyle14W400brown = TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.brown
+  );
 }

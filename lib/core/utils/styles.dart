@@ -26,7 +26,7 @@ abstract class Styles{
   );
 
   //auth
-  static TextStyle textStyle32W700White = TextStyle(
+  static TextStyle textStyle32W700Brown = TextStyle(
       fontSize: 32.sp,
       fontWeight: FontWeight.w700,
       color: AppColors.brown
@@ -66,7 +66,7 @@ abstract class Styles{
       fontWeight: FontWeight.w400,
       color: Colors.black
   );
-  static TextStyle textStyle14W400brown = TextStyle(
+  static TextStyle textStyle14W400Brown = TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: AppColors.brown

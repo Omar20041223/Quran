@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
               textTheme: GoogleFonts.elMessiriTextTheme(),
-              scaffoldBackgroundColor: Colors.white),
+              ),
         );
       },
     );

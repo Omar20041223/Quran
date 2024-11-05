@@ -6,7 +6,8 @@ import 'package:quran/core/widgets/custom_button.dart';
 import '../../../../../core/utils/colors.dart';
 
 class OnboardingRowButtonsForContainer extends StatelessWidget {
-  const OnboardingRowButtonsForContainer({super.key});
+  const OnboardingRowButtonsForContainer({super.key,required this.onPressedContinue});
+  final Function() onPressedContinue;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,9 @@ class OnboardingRowButtonsForContainer extends StatelessWidget {
               color: AppColors.lightGrey,
             ),
             backgroundColor: Colors.transparent,
+            onPressed: (){
+              // GoRouter.of(context).push(location)
+            },
           ),
         ),
         14.horizontalSpace,
@@ -33,6 +37,7 @@ class OnboardingRowButtonsForContainer extends StatelessWidget {
               color: AppColors.brown,
             ),
             backgroundColor: Colors.white,
+            onPressed: onPressedContinue,
           ),
         ),
       ],

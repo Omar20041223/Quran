@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quran/core/utils/app_router.dart';
 import 'package:quran/core/widgets/custom_image.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -22,8 +24,13 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: CustomImage(url: "assets/images/splash_image.png"),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(30.r),
+      child: const Scaffold(
+        body: CustomImage(
+          url: "assets/images/splash_image.png",
+        ),
+      ),
     );
   }
 }

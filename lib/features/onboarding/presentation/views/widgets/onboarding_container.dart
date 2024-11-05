@@ -5,8 +5,10 @@ import 'package:quran/features/onboarding/presentation/views/widgets/onboarding_
 import '../../../../../core/utils/styles.dart';
 
 class OnboardingContainer extends StatelessWidget {
-  const OnboardingContainer({super.key});
-
+  const OnboardingContainer({super.key, required this.onPressedContinue, required this.title, required this.description});
+  final Function() onPressedContinue;
+  final String title;
+  final String description;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +31,7 @@ class OnboardingContainer extends StatelessWidget {
         children: [
           38.verticalSpace,
           Text(
-            "حافظ على التحفيز",
+            title,
             style: Styles.textStyle32W600White,
           ),
           39.verticalSpace,
@@ -37,11 +39,11 @@ class OnboardingContainer extends StatelessWidget {
               textDirection: TextDirection.rtl,
               child: Text(
                 textAlign: TextAlign.center,
-                "استلم تذكيرات يومية وآيات ملهمة تبقيك متصلاً بالقرآن.",
+                description,
                 style: Styles.textStyle24W400White,
               )),
           42.verticalSpace,
-          const OnboardingRowButtonsForContainer(),
+          OnboardingRowButtonsForContainer(onPressedContinue: onPressedContinue,),
           16.verticalSpace
         ],
       ),

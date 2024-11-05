@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quran/core/utils/styles.dart';
 import 'package:quran/core/widgets/custom_button.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/colors.dart';
 
 class OnboardingRowButtonsForContainer extends StatelessWidget {
@@ -23,7 +25,7 @@ class OnboardingRowButtonsForContainer extends StatelessWidget {
             ),
             backgroundColor: Colors.transparent,
             onPressed: (){
-              // GoRouter.of(context).push(location)
+              GoRouter.of(context).push(AppRouter.kRegisterView);
             },
           ),
         ),

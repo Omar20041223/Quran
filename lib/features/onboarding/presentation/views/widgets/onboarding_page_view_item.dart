@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quran/core/widgets/custom_image.dart';
 import 'package:quran/core/widgets/custom_indicator.dart';
 import 'package:quran/features/onboarding/data/models/onboarding_model.dart';
 import 'package:quran/features/onboarding/presentation/views/widgets/onboarding_container.dart';
+
+import '../../../../../core/utils/app_router.dart';
 
 class OnboardingPageViewItem extends StatelessWidget {
   const OnboardingPageViewItem(
@@ -22,7 +25,7 @@ class OnboardingPageViewItem extends StatelessWidget {
           OnboardingContainer(
             onPressedContinue: () {
               if (currentIndex == 2) {
-                // GoRouter.of(context).push(AppRouter.);
+                GoRouter.of(context).push(AppRouter.kRegisterView);
               } else {
                 pageController.nextPage(
                   duration: const Duration(milliseconds: 200),

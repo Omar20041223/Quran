@@ -11,48 +11,31 @@ class RegisterTail extends StatelessWidget {
         32.verticalSpace,
         Text("خيارات تسجيل الدخول الأخرى",style: Styles.textStyle14W400Black,),
         24.verticalSpace,
-        // todo change icons and extract widgets
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 50.r,
-              width: 50.r,
-              decoration:  BoxDecoration(
-                shape:  BoxShape.circle,
-                border: Border.all(
-                  color: const Color(0xffD8DADC)
-                )
-              ),
-              child: Icon(Icons.apple),
-            ),
+            _container(image: "assets/images/facebook_icon.png"),
             11.horizontalSpace,
-            Container(
-              height: 50.r,
-              width: 50.r,
-              decoration:  BoxDecoration(
-                shape:  BoxShape.circle,
-                border: Border.all(
-                  color: const Color(0xffD8DADC)
-                )
-              ),
-              child: Icon(Icons.garage_outlined),
-            ),
+            _container(image: "assets/images/google_icon.png"),
             11.horizontalSpace,
-            Container(
-              height: 50.r,
-              width: 50.r,
-              decoration:  BoxDecoration(
-                shape:  BoxShape.circle,
-                border: Border.all(
-                  color: const Color(0xffD8DADC)
-                )
-              ),
-              child: Icon(Icons.facebook),
-            ),
+            _container(image: "assets/images/apple_icon.png"),
           ],
         )
       ],
     );
   }
+  Widget _container({required String image}) {
+    return Container(
+      height: 50.r,
+      width: 50.r,
+      decoration:  BoxDecoration(
+          shape:  BoxShape.circle,
+          border: Border.all(
+              color: const Color(0xffD8DADC)
+          )
+      ),
+      child: Center(child: Image.asset(image,width: 20.w,height: 20.h,)),
+    );
+  }
+
 }

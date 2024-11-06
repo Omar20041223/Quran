@@ -6,7 +6,6 @@ import 'package:quran/features/auth/presentation/views/widgets/register_header.d
 import 'package:quran/features/auth/presentation/views/widgets/register_tail.dart';
 import 'package:quran/features/auth/presentation/views/widgets/sign_up_body.dart';
 
-
 class RegisterBody extends StatefulWidget {
   const RegisterBody({super.key});
 
@@ -21,6 +20,7 @@ class _RegisterBodyState extends State<RegisterBody> {
   Widget build(BuildContext context) {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0.h),
       child: SingleChildScrollView(
@@ -28,12 +28,19 @@ class _RegisterBodyState extends State<RegisterBody> {
           children: [
             const RegisterHeader(),
             24.verticalSpace,
-            RegisterButtonsForTapBar(onIndexChanged: (int value) {
-              index = value;
-              setState(() {});
-            },),
+            RegisterButtonsForTapBar(
+              onIndexChanged: (int value) {
+                index = value;
+                setState(() {});
+              },
+            ),
             32.verticalSpace,
-            index == 1 ? LoginBody(emailController: emailController, passwordController: passwordController) : SignUpBody(),
+            index == 1
+                ? LoginBody(
+                    emailController: emailController,
+                    passwordController: passwordController)
+                : SignUpBody(emailController: emailController, passwordController: passwordController, confirmPasswordController: confirmPasswordController,),
+            32.verticalSpace,
             const RegisterTail(),
             43.verticalSpace,
           ],

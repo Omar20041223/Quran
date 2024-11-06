@@ -8,7 +8,6 @@ class RegisterTail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        32.verticalSpace,
         Text("خيارات تسجيل الدخول الأخرى",style: Styles.textStyle14W400Black,),
         24.verticalSpace,
         Row(

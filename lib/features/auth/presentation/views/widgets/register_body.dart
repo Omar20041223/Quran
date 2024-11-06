@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/widgets/custom_image.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register_buttons_for_tap_bar.dart';
 import 'package:quran/features/auth/presentation/views/widgets/register_header.dart';
 import 'package:quran/features/auth/presentation/views/widgets/register_tail.dart';
 
@@ -17,6 +18,8 @@ class RegisterBody extends StatelessWidget {
         children: [
           const RegisterHeader(),
           24.verticalSpace,
+          RegisterButtonsForTapBar(onIndexChanged: (int value) {  },),
+          32.verticalSpace,
           const Expanded(
             child: CustomImage(url: Assets.onBoarding1),
           ),

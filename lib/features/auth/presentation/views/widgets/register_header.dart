@@ -17,14 +17,14 @@ class RegisterHeader extends StatelessWidget {
         ),
         16.verticalSpace,
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 32.0.w),
+          padding: EdgeInsets.symmetric(horizontal: 32.0.w),
           child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Text(
-                "قم بتسجيل الدخول أو إنشاء حساب جديد لحفظ تقدمك",
-                textAlign: TextAlign.center,
-                style: Styles.textStyle16W500LightGrey,
-              )),
+            textDirection: TextDirection.rtl,
+            child: Text(
+              "قم بتسجيل الدخول أو إنشاء حساب جديد لحفظ تقدمك",
+              textAlign: TextAlign.center,
+              style: Styles.textStyle16W500LightGrey,
+            ),),
         )
       ],
     );

@@ -52,7 +52,7 @@ class CustomButton extends StatelessWidget {
           child: Center(
             child: Text(
               text,
-              style: textStyle ?? Styles.textStyle20W400Brown,
+              style: textStyle ?? Styles.textStyle18W600White,
             ),
           ),
         ),

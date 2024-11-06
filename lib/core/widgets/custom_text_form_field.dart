@@ -12,7 +12,8 @@ class CustomTextFormField extends StatelessWidget {
         this.controller,
         this.validator,
         this.obscureText = false,
-        this.suffixIcon});
+        // this.suffixIcon
+      });
 
   final String hintText;
   // final IconData icon;
@@ -20,7 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool obscureText;
-  final Widget? suffixIcon;
+  // final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -54,6 +55,7 @@ class CustomTextFormField extends StatelessWidget {
         // ),
       ),
       keyboardType: textInputType,
+      textAlign: TextAlign.end,
     );
   }
 }

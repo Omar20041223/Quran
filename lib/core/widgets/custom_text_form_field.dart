@@ -11,7 +11,7 @@ class CustomTextFormField extends StatelessWidget {
         required this.textInputType,
         this.controller,
         this.validator,
-        this.obscureText = false,
+        this.obscureText = false, this.autoValidateMode,
         // this.suffixIcon
       });
 
@@ -21,12 +21,17 @@ class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool obscureText;
+  final AutovalidateMode? autoValidateMode;
+
   // final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode: autoValidateMode,
       controller: controller,
-      validator: validator,
+      validator: (value) {
+        return validator!(value);
+      },
       obscureText: obscureText,
       decoration: InputDecoration(
         filled: true,

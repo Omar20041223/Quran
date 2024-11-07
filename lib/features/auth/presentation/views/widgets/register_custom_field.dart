@@ -3,12 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/utils/styles.dart';
 import 'package:quran/core/widgets/custom_text_form_field.dart';
 class RegisterCustomField extends StatelessWidget {
-  const RegisterCustomField({super.key, required this.title, required this.hintText, required this.textInputType, required this.controller, this.obscureText = false});
+  const RegisterCustomField({super.key, required this.title, required this.hintText, required this.textInputType, required this.controller, this.obscureText = false, this.validator, this.autoValidateMode});
   final String title;
   final String hintText;
   final TextInputType textInputType;
   final TextEditingController controller;
   final bool obscureText;
+  final String? Function(String?)? validator;
+  final AutovalidateMode? autoValidateMode;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,7 +19,7 @@ class RegisterCustomField extends StatelessWidget {
       children: [
         Text(title,style: Styles.textStyle16W500Black,),
         12.verticalSpace,
-        CustomTextFormField(hintText: hintText, textInputType: textInputType,controller:controller,obscureText: obscureText,)
+        CustomTextFormField(hintText: hintText, textInputType: textInputType,controller:controller,obscureText: obscureText,validator: validator,autoValidateMode: autoValidateMode,)
       ],
     );
   }

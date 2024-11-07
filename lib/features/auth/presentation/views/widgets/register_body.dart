@@ -18,9 +18,6 @@ class _RegisterBodyState extends State<RegisterBody> {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
-    TextEditingController confirmPasswordController = TextEditingController();
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.0.h),
       child: SingleChildScrollView(
@@ -36,10 +33,8 @@ class _RegisterBodyState extends State<RegisterBody> {
             ),
             32.verticalSpace,
             index == 1
-                ? LoginBody(
-                    emailController: emailController,
-                    passwordController: passwordController)
-                : SignUpBody(emailController: emailController, passwordController: passwordController, confirmPasswordController: confirmPasswordController,),
+                ? const LoginBody()
+                : const SignUpBody(),
             32.verticalSpace,
             const RegisterTail(),
             43.verticalSpace,

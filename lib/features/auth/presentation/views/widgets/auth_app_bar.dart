@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../../core/utils/colors.dart';
-class ForgetPasswordAppBar extends StatelessWidget {
-  const ForgetPasswordAppBar({super.key});
+import '../../../../../core/utils/colors.dart';
+class AuthAppBar extends StatelessWidget {
+  const AuthAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

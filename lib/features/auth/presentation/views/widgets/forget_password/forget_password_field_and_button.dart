@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:quran/core/utils/app_router.dart';
 
 import '../../../../../../core/helpers/validator.dart';
 import '../../../../../../core/widgets/custom_button.dart';
@@ -35,6 +37,7 @@ class _ForgetPasswordFieldAndButtonState extends State<ForgetPasswordFieldAndBut
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
+                GoRouter.of(context).push(AppRouter.kVerificationView);
               } else {
                 setState(() {});
                 autoValidateMode = AutovalidateMode.always;

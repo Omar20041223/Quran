@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_header.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_tab_bar.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_tail.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/register_header.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/register_tab_bar.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/register_tail.dart';
 
 class RegisterBody extends StatelessWidget {
   const RegisterBody({super.key});

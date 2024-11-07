@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/helpers/validator.dart';
 import 'package:quran/core/utils/styles.dart';
 import 'package:quran/core/widgets/custom_button.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_custom_field.dart';
+import 'package:quran/features/auth/presentation/views/widgets/auth_custom_field.dart';
 
 class LoginBody extends StatefulWidget {
   const LoginBody({
@@ -26,7 +26,7 @@ class _LoginBodyState extends State<LoginBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RegisterCustomField(
+          AuthCustomField(
             title: "البريد الالكتروني",
             hintText: "ادخل بريدك الالكتروني",
             textInputType: TextInputType.emailAddress,
@@ -35,7 +35,7 @@ class _LoginBodyState extends State<LoginBody> {
             autoValidateMode: autoValidateMode,
           ),
           24.verticalSpace,
-          RegisterCustomField(
+          AuthCustomField(
             title: "كلمة المرور",
             hintText: "ادخل كلمة المرور",
             textInputType: TextInputType.visiblePassword,

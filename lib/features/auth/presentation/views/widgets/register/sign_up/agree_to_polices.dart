@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/core/utils/styles.dart';
-import '../../../../../core/utils/colors.dart';
+import '../../../../../../../core/utils/colors.dart';
 
 class AgreeToPolicies extends FormField<bool> {
   AgreeToPolicies({

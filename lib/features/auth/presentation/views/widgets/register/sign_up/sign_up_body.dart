@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/helpers/validator.dart';
-import 'package:quran/features/auth/presentation/views/widgets/agree_to_polices.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_custom_field.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/sign_up/agree_to_polices.dart';
+import 'package:quran/features/auth/presentation/views/widgets/auth_custom_field.dart';
 
-import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../../../core/widgets/custom_button.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody(
@@ -25,7 +25,7 @@ class _SignUpBodyState extends State<SignUpBody> {
       key: formKey,
       child: Column(
         children: [
-          RegisterCustomField(
+          AuthCustomField(
             title: "البريد الالكتروني",
             hintText: "ادخل بريدك الالكتروني",
             textInputType: TextInputType.emailAddress,
@@ -34,7 +34,7 @@ class _SignUpBodyState extends State<SignUpBody> {
             autoValidateMode: autoValidateMode,
           ),
           24.verticalSpace,
-          RegisterCustomField(
+          AuthCustomField(
             title: "كلمة المرور",
             hintText: "ادخل كلمة المرور",
             textInputType: TextInputType.visiblePassword,
@@ -44,7 +44,7 @@ class _SignUpBodyState extends State<SignUpBody> {
             autoValidateMode: autoValidateMode,
           ),
           24.verticalSpace,
-          RegisterCustomField(
+          AuthCustomField(
               title: "تأكيد كلمة المرور",
               hintText: "ادخل كلمة المرور",
               textInputType: TextInputType.visiblePassword,

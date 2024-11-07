@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quran/features/auth/presentation/views/widgets/register_buttons_for_tap_bar.dart';
-import 'package:quran/features/auth/presentation/views/widgets/sign_up_body.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/login/login_body.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/register_buttons_for_tap_bar.dart';
+import 'package:quran/features/auth/presentation/views/widgets/register/sign_up/sign_up_body.dart';
 
-import 'login_body.dart';
 class RegisterTabBar extends StatefulWidget {
   const RegisterTabBar({super.key});
 

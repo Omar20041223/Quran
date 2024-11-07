@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quran/core/helpers/validator.dart';
+import 'package:quran/core/utils/app_router.dart';
 import 'package:quran/core/utils/styles.dart';
 import 'package:quran/core/widgets/custom_button.dart';
 import 'package:quran/features/auth/presentation/views/widgets/auth_custom_field.dart';
@@ -9,6 +11,7 @@ class LoginBody extends StatefulWidget {
   const LoginBody({
     super.key,
   });
+
   @override
   State<LoginBody> createState() => _LoginBodyState();
 }
@@ -44,10 +47,15 @@ class _LoginBodyState extends State<LoginBody> {
             validator: Validator.passwordValidator,
             autoValidateMode: autoValidateMode,
           ),
-          16.verticalSpace,
-          Text(
-            "نسيت كلمة المرور؟",
-            style: Styles.textStyle14W400Brown,
+          // 16.verticalSpace,
+          TextButton(
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kForgetPasswordView);
+            },
+            child: Text(
+              "نسيت كلمة المرور؟",
+              style: Styles.textStyle14W400Brown,
+            ),
           ),
           64.verticalSpace,
           CustomButton(

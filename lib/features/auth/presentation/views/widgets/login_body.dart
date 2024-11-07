@@ -6,10 +6,9 @@ import 'package:quran/core/widgets/custom_button.dart';
 import 'package:quran/features/auth/presentation/views/widgets/register_custom_field.dart';
 
 class LoginBody extends StatefulWidget {
-  const LoginBody(
-      {super.key,});
-
-
+  const LoginBody({
+    super.key,
+  });
   @override
   State<LoginBody> createState() => _LoginBodyState();
 }

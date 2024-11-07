@@ -9,7 +9,6 @@ import '../../../../../core/widgets/custom_button.dart';
 class SignUpBody extends StatefulWidget {
   const SignUpBody(
       {super.key,});
-
   @override
   State<SignUpBody> createState() => _SignUpBodyState();
 }
@@ -60,7 +59,7 @@ class _SignUpBodyState extends State<SignUpBody> {
           AgreeToPolicies(
             validator: (value) {
               if (value != true) {
-                return 'You must agree to the terms and conditions.';
+                return 'يجب عليك الموافقة على الشروط والأحكام.';
               }
               return null;
             },

@@ -1,98 +1,97 @@
-
 import 'app_regex.dart';
 
 class Validator {
   static String? userNameValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return "Username cannot be empty.";
+      return "لا يمكن أن يكون اسم المستخدم فارغًا.";
     }
     if (value.length <= 2) {
-      return "Username should be at least 3 characters long.";
+      return "يجب أن يكون اسم المستخدم 3 أحرف على الأقل.";
     }
     if (value.length > 40) {
-      return "Username cannot exceed 40 characters.";
+      return "لا يمكن أن يتجاوز اسم المستخدم 40 حرفًا.";
     }
     if (!AppRegex.isUsernameValid(value)) {
-      return "Please enter a valid username.";
+      return "يرجى إدخال اسم مستخدم صالح.";
     }
     return null;
   }
 
   static String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Email address is required.';
+      return 'البريد الإلكتروني مطلوب.';
     }
     if (!AppRegex.isEmailValid(value)) {
-      return 'Please enter a valid email address.';
+      return 'يرجى إدخال بريد إلكتروني صالح.';
     }
     return null;
   }
 
   static String? phoneNumberValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Phone number is required.';
+      return 'رقم الهاتف مطلوب.';
     }
     if (value.length < 9 || value.length > 20) {
-      return 'Please enter a valid phone number.';
+      return 'يرجى إدخال رقم هاتف صالح.';
     }
     return null;
   }
 
   static String? passwordValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Password is required.';
+      return 'كلمة المرور مطلوبة.';
     }
     if (value.length < 8) {
-      return 'Password should be at least 8 characters long.';
+      return 'يجب أن تكون كلمة المرور 8 أحرف على الأقل.';
     }
     if (!AppRegex.hasUpperCase(value)) {
-      return 'Password must contain at least one uppercase letter.';
+      return 'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل.';
     }
     if (!AppRegex.hasLowerCase(value)) {
-      return 'Password must contain at least one lowercase letter.';
+      return 'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل.';
     }
     if (!AppRegex.hasNumber(value)) {
-      return 'Password must contain at least one number.';
+      return 'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل.';
     }
     return null;
   }
 
   static String? passwordConfirmValidator(String? value, String? password) {
     if (value == null || value.isEmpty) {
-      return 'Password confirmation is required.';
+      return 'تأكيد كلمة المرور مطلوب.';
     }
     if (value != password) {
-      return 'Passwords do not match.';
+      return 'كلمتا المرور غير متطابقتين.';
     }
     return null;
   }
 
   static String? loginPasswordValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Password is required.';
+      return 'كلمة المرور مطلوبة.';
     }
     if (value.length < 8) {
-      return 'Password should be at least 8 characters long.';
+      return 'يجب أن تكون كلمة المرور 8 أحرف على الأقل.';
     }
     return null;
   }
 
   static String? validatePhoneOrEmail(String? input) {
     if (input == null || input.isEmpty) {
-      return 'Please enter your email or phone number';
+      return 'يرجى إدخال بريدك الإلكتروني أو رقم هاتفك';
     }
 
     final emailRegex =
-        RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+    RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
 
     final phoneRegex = RegExp(r"^\+?[0-9]{10,15}$");
 
     if (emailRegex.hasMatch(input)) {
-      return null; // Valid email
+      return null; // بريد إلكتروني صالح
     } else if (phoneRegex.hasMatch(input)) {
-      return null; // Valid phone number
+      return null; // رقم هاتف صالح
     } else {
-      return 'Please enter a valid email or phone number';
+      return 'يرجى إدخال بريد إلكتروني أو رقم هاتف صالح';
     }
   }
 }

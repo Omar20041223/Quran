@@ -4,18 +4,20 @@ import 'package:quran/core/utils/colors.dart';
 import 'package:quran/core/utils/styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField(
-      {super.key,
-        required this.hintText,
-        // required this.icon,
-        required this.textInputType,
-        this.controller,
-        this.validator,
-        this.obscureText = false, this.autoValidateMode,
-        // this.suffixIcon
-      });
+  const CustomTextFormField({
+    super.key,
+    required this.hintText,
+    // required this.icon,
+    required this.textInputType,
+    this.controller,
+    this.validator,
+    this.obscureText = false,
+    this.autoValidateMode,
+    // this.suffixIcon
+  });
 
   final String hintText;
+
   // final IconData icon;
   final TextInputType textInputType;
   final TextEditingController? controller;
@@ -51,13 +53,13 @@ class CustomTextFormField extends StatelessWidget {
             width: 1,
           ),
         ),
-        // errorBorder: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(10.r),
-        //   borderSide: BorderSide(
-        //     width: 2.w,
-        //     color: Colors.red,
-        //   ), // Thicker red border on error
-        // ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide(
+            width: 1.w,
+            color: Colors.red,
+          ),
+        ),
       ),
       keyboardType: textInputType,
       textAlign: TextAlign.end,

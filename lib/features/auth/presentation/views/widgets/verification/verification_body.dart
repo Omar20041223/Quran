@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/features/auth/presentation/views/widgets/auth_app_bar.dart';
 import 'package:quran/features/auth/presentation/views/widgets/auth_header.dart';
 import 'package:quran/features/auth/presentation/views/widgets/verification/verification_otp.dart';
+import 'package:quran/features/auth/presentation/views/widgets/verification/verification_tail.dart';
 
 class VerificationBody extends StatelessWidget {
   const VerificationBody({super.key});
@@ -20,7 +21,9 @@ class VerificationBody extends StatelessWidget {
               title: "رمز التحقق",
               description: "أدخل الرمز الذي أرسلناه إلى رقمك 01210190837 "),
           48.verticalSpace,
-          const VerificationOtp()
+          const VerificationOtp(),
+          24.verticalSpace,
+          const VerificationTail(),
         ],
       ),
     );

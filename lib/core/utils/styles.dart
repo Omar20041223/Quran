@@ -81,4 +81,19 @@ abstract class Styles{
       fontWeight: FontWeight.w700,
       color: Colors.black
   );
+  static TextStyle textStyle16W400DarkGrey = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.darkGrey
+  );
+  static TextStyle textStyle16W400LighterGrey = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.lighterGrey
+  );
+  static TextStyle textStyle18W400Brown = TextStyle(
+      fontSize: 18.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.brown
+  );
 }

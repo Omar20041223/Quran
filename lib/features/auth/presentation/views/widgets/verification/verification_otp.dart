@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/utils/colors.dart';
 import 'package:quran/core/utils/styles.dart';
 import 'package:quran/core/widgets/custom_button.dart';
+import 'package:quran/features/auth/presentation/views/widgets/verification/verification_otp_column_for_alert_dialog.dart';
 
 class VerificationOtp extends StatefulWidget {
   const VerificationOtp({super.key});
@@ -12,7 +13,8 @@ class VerificationOtp extends StatefulWidget {
 }
 
 class _VerificationOtpState extends State<VerificationOtp> {
-  final List<TextEditingController> controllers = List.generate(6, (_) => TextEditingController());
+  final List<TextEditingController> controllers =
+      List.generate(6, (_) => TextEditingController());
   String? _errorMessage;
 
   @override
@@ -49,6 +51,24 @@ class _VerificationOtpState extends State<VerificationOtp> {
     return controllers.every((controller) => controller.text.isNotEmpty);
   }
 
+  void showVerificationDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 32.h, horizontal: 32.w),
+              height: 401.h,
+              width: 327.w,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(24.r)),
+              child: const VerificationOtpColumnForAlertDialog(),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -73,7 +93,9 @@ class _VerificationOtpState extends State<VerificationOtp> {
                   decoration: InputDecoration(
                     counterText: "",
                     filled: true,
-                    fillColor: controllers[index].text.isEmpty ? const Color(0xffF0F8FF) : Colors.transparent,
+                    fillColor: controllers[index].text.isEmpty
+                        ? const Color(0xffF0F8FF)
+                        : Colors.transparent,
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(16.r),
                       borderSide: BorderSide(
@@ -92,11 +114,13 @@ class _VerificationOtpState extends State<VerificationOtp> {
                   onChanged: (value) {
                     setState(() {
                       if (_areAllFieldsFilled()) {
-                        _errorMessage = null; // Clear error if all fields are filled
+                        _errorMessage =
+                            null; // Clear error if all fields are filled
                       }
                     });
                     if (value.isNotEmpty && index < 5) {
-                      FocusScope.of(context).nextFocus(); // Move to the next field
+                      FocusScope.of(context)
+                          .nextFocus(); // Move to the next field
                     }
                   },
                 ),
@@ -118,15 +142,18 @@ class _VerificationOtpState extends State<VerificationOtp> {
           CustomButton(
             text: "تحقق",
             onPressed: () {
-              setState(() {
-                final otpCode = _validateOtp();
-                if (otpCode == null) {
-                  _errorMessage = 'يرجى ملء جميع الحقول';
-                } else {
-                  _errorMessage = null; // Clear error message
-                  print("OTP Code: $otpCode"); // Use OTP code as needed
-                }
-              });
+              setState(
+                () {
+                  final otpCode = _validateOtp();
+                  if (otpCode == null) {
+                    _errorMessage = 'يرجى ملء جميع الحقول';
+                  } else {
+                    _errorMessage = null; // Clear error message
+                    print("OTP Code: $otpCode");
+                    showVerificationDialog(context); // Use OTP code as needed
+                  }
+                },
+              );
             },
           ),
         ],

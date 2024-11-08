@@ -63,6 +63,7 @@ class _LoginBodyState extends State<LoginBody> {
             onPressed: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
+                GoRouter.of(context).push(AppRouter.kVerificationSuccessView);
               } else {
                 setState(() {});
                 autoValidateMode = AutovalidateMode.always;

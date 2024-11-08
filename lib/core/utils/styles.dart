@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran/core/utils/colors.dart';
 
 abstract class Styles{
-  //onboarding
   static TextStyle textStyle32W600White = TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeight.w600,
@@ -24,8 +23,6 @@ abstract class Styles{
     fontWeight: FontWeight.w400,
     color: AppColors.lightGrey
   );
-
-  //auth
   static TextStyle textStyle32W700Brown = TextStyle(
       fontSize: 32.sp,
       fontWeight: FontWeight.w700,
@@ -50,6 +47,16 @@ abstract class Styles{
       fontSize: 16.sp,
       fontWeight: FontWeight.w500,
       color: Colors.black
+  );
+  static TextStyle textStyle16W500White = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      color: Colors.white
+  );
+  static TextStyle textStyle16W400White = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: Colors.white
   );
   static TextStyle textStyle14W400LightGrey = TextStyle(
       fontSize: 14.sp,

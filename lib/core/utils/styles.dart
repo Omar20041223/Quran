@@ -96,4 +96,9 @@ abstract class Styles{
       fontWeight: FontWeight.w400,
       color: AppColors.brown
   );
+  static TextStyle textStyle24W600Brown = TextStyle(
+      fontSize: 24.sp,
+      fontWeight: FontWeight.w600,
+      color: AppColors.brown
+  );
 }

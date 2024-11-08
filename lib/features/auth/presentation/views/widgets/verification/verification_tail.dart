@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../core/utils/styles.dart';
 
 class VerificationTail extends StatelessWidget {
@@ -17,7 +19,9 @@ class VerificationTail extends StatelessWidget {
           TextSpan(
             text: ' إعادة ارسال',
             style: Styles.textStyle18W400Brown,
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()..onTap = () {
+              GoRouter.of(context).push(AppRouter.kVerificationSuccessView) ;
+            },
           ),
         ],
       ),

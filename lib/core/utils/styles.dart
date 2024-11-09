@@ -18,6 +18,16 @@ abstract class Styles{
     fontWeight: FontWeight.w400,
     color: AppColors.brown
   );
+  static TextStyle textStyle20W500Black = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    color: Colors.black
+  );
+  static TextStyle textStyle20W600Brown = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.brown
+  );
   static TextStyle textStyle20W400LightGrey = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w400,
@@ -32,6 +42,11 @@ abstract class Styles{
       fontSize: 16.sp,
       fontWeight: FontWeight.w500,
       color: AppColors.lightGrey
+  );
+  static TextStyle textStyle16W500Brown = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w500,
+      color: AppColors.brown
   );
   static TextStyle textStyle16W400Black = TextStyle(
       fontSize: 16.sp,
@@ -92,6 +107,11 @@ abstract class Styles{
       fontSize: 16.sp,
       fontWeight: FontWeight.w400,
       color: AppColors.darkGrey
+  );
+  static TextStyle textStyle16W400Brown = TextStyle(
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.brown
   );
   static TextStyle textStyle16W400LighterGrey = TextStyle(
       fontSize: 16.sp,
